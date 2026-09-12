@@ -1,78 +1,58 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <meta
     name="description"
-    content="Portfolio de Franco Tomás Russo — Software Developer Jr."
-  >
+    content="Portfolio of Franco Tomás Russo — Junior Software Developer"
+  />
 
-  <title>
-    Franco Tomas Russo — Software Developer
-  </title>
-
+  <title>Franco Tomas Russo — Software Developer</title>
 
   <!-- Bootstrap -->
-
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
-  >
-
+  />
 
   <!-- CSS propio -->
-
-  <link
-    rel="stylesheet"
-    href="./css/style.css"
-  >
-
+  <link href="./css/style.css" rel="stylesheet" />
 
   <script>
     document.documentElement.classList.add("js-ready");
   </script>
-
 </head>
 
-
 <body>
+
+  <!-- =====================================================
+       Cursor glow 
+  ====================================================== -->
+  <div class="cursor-glow"></div>
 
   <div class="noise"></div>
 
 
-  <!-- =========================
+  <!-- =====================================================
        HEADER
-  ========================== -->
+  ====================================================== -->
 
   <header class="header">
 
-    <a
-      href="#home"
-      class="logo"
-    >
-
+    <a class="logo" href="#home">
       <span class="logo-dot"></span>
 
       <span>
         Franco Tomas Russo<span class="muted">.dev</span>
       </span>
-
     </a>
 
+    <!-- NAVEGACIÓN -->
 
-    <nav
-      class="nav"
-      aria-label="Navegación principal"
-    >
+    <nav class="nav" aria-label="Navegación principal">
 
       <a href="#home">
         Home
@@ -94,21 +74,68 @@
         Stack
       </a>
 
-      <a
-        href="#contact"
-        class="nav-button"
-      >
+      <a class="nav-button" href="#contact">
         Let's talk <span>↗</span>
       </a>
 
     </nav>
 
+    <!-- =========================
+        LANGUAGE SWITCH
+    ========================== -->
+    <div class="language-switch">
+
+      <span
+        class="language-flag flag-argentina"
+        id="flag-es"
+        title="Español"
+      >
+        <img
+          src="./img/banderaargentina.webp"
+          alt="Argentina"
+        />
+      </span>
+
+      <label
+        class="language-switch-label"
+        for="language-toggle"
+        title="Cambiar idioma"
+      >
+
+        <input
+          type="checkbox"
+          role="switch"
+          id="language-toggle"
+          aria-label="Cambiar idioma"
+        >
+
+        <span class="language-slider"></span>
+
+      </label>
+
+      <span
+        class="language-flag flag-england"
+        id="flag-en"
+        title="English"
+      >
+        <img
+          src="./img/pirata.webp"
+          alt="England"
+        />
+      </span>
+
+    </div>
+
+
+    <!-- =====================================================
+         MOBILE MENU
+    ====================================================== -->
 
     <button
       class="menu-toggle"
-      aria-label="Abrir menú"
-      aria-expanded="false"
       type="button"
+      aria-expanded="false"
+      aria-label="Abrir menú"
     >
       ☰
     </button>
@@ -116,18 +143,13 @@
   </header>
 
 
-
   <main>
-
 
     <!-- =====================================================
          HERO
     ====================================================== -->
 
-    <section
-      id="home"
-      class="hero-simple container"
-    >
+    <section class="hero-simple container" id="home">
 
       <div class="hero-topline">
 
@@ -148,52 +170,53 @@
 
       <div class="hero-simple-content">
 
+        <!-- HERO TEXT -->
 
         <div class="hero-simple-text">
 
-          <p class="kicker">
-            HOLA, SOY FRANCO
+          <p
+            class="kicker"
+            data-i18n-en="HELLO, I’M FRANCO"
+            data-i18n-es="HOLA, SOY FRANCO"
+          >
+            HELLO, I’M FRANCO
           </p>
 
 
           <h1>
-
-            Software<br>
+            Software<br />
 
             <em>
               Developer.
             </em>
-
           </h1>
 
 
-          <p class="hero-description">
+          <p
+            class="hero-description"
+            data-i18n-en="I’m Franco Tomás Russo, a software developer focused on web applications, backend development, and software solutions. <br><br> I’m currently finishing my Systems Analyst degree."
+            data-i18n-es="Soy Franco Tomás Russo, desarrollador de software enfocado en aplicaciones web, backend y soluciones de software. Actualmente estoy finalizando la carrera de Analista de Sistemas."
+          >
+            I’m Franco Tomás Russo, a software developer focused on web
+            applications, backend development, and software solutions.
 
-            Soy Franco Tomás Russo, desarrollador de software
-            enfocado en aplicaciones web, backend y soluciones
-            de software.
+            <br />
+            <br />
 
-            Actualmente estoy finalizando la carrera de
-            Analista de Sistemas.
-
+            I’m currently finishing my Systems Analyst degree.
           </p>
 
 
+          <!-- BOTONES -->
+
           <div class="hero-actions">
 
-            <a
-              class="button button-primary"
-              href="#projects"
-            >
+            <a class="button button-primary" href="#projects">
               Ver proyectos
               <span>↓</span>
             </a>
 
-
-            <a
-              class="button button-ghost"
-              href="#contact"
-            >
+            <a class="button button-ghost" href="#contact">
               Contactarme
               <span>↗</span>
             </a>
@@ -203,9 +226,9 @@
         </div>
 
 
+        <!-- HERO ESTADÍSTICAS -->
 
         <div class="hero-simple-info">
-
 
           <div class="hero-stat">
 
@@ -213,8 +236,11 @@
               8.84
             </strong>
 
-            <span>
-              Promedio académico
+            <span
+              data-i18n-en="Academic average"
+              data-i18n-es="Promedio académico"
+            >
+              Academic average
             </span>
 
           </div>
@@ -226,8 +252,11 @@
               10+
             </strong>
 
-            <span>
-              Tecnologías
+            <span
+              data-i18n-en="Technologies"
+              data-i18n-es="Tecnologías"
+            >
+              Technologies
             </span>
 
           </div>
@@ -239,12 +268,14 @@
               2026
             </strong>
 
-            <span>
-              Finalización de carrera
+            <span
+              data-i18n-en="Degree completion"
+              data-i18n-es="Finalización de carrera"
+            >
+              Degree completion
             </span>
 
           </div>
-
 
         </div>
 
@@ -253,16 +284,11 @@
     </section>
 
 
-
     <!-- =====================================================
          PROYECTOS
     ====================================================== -->
 
-    <section
-      id="projects"
-      class="section container"
-    >
-
+    <section class="section container" id="projects">
 
       <div class="section-label">
 
@@ -277,23 +303,25 @@
       </div>
 
 
-
       <div class="projects-head">
 
         <div>
 
-          <p class="kicker">
-            PROYECTOS ACADÉMICOS
+          <p
+            class="kicker"
+            data-i18n-en="ACADEMIC PROJECTS"
+            data-i18n-es="PROYECTOS ACADÉMICOS"
+          >
+            ACADEMIC PROJECTS
           </p>
 
-          <h2>
 
-            Things I've<br>
+          <h2>
+            Things I've<br />
 
             <em>
               built.
             </em>
-
           </h2>
 
         </div>
@@ -306,10 +334,7 @@
       </div>
 
 
-
       <div class="academic-projects">
-
-
 
         <!-- =================================================
              PROYECTO 01 - SONY
@@ -317,24 +342,23 @@
 
         <article class="academic-project">
 
-
           <div class="academic-project-image">
 
-
             <div
-              id="carouselSony"
               class="carousel slide"
+              id="carouselSony"
               data-bs-ride="carousel"
             >
 
+              <!-- INDICADORES -->
 
               <div class="carousel-indicators">
 
                 <button
+                  class="active"
                   type="button"
                   data-bs-target="#carouselSony"
                   data-bs-slide-to="0"
-                  class="active"
                   aria-current="true"
                   aria-label="Imagen 1"
                 ></button>
@@ -356,17 +380,17 @@
               </div>
 
 
+              <!-- IMÁGENES -->
 
               <div class="carousel-inner">
-
 
                 <div class="carousel-item active">
 
                   <img
+                    class="d-block w-100"
                     src="./img/proyectos/vista_producto_sony.png"
-                    class="d-block w-100"
-                    alt="Sony Website - Inicio"
-                  >
+                    alt="Sony Website - Home"
+                  />
 
                 </div>
 
@@ -374,10 +398,10 @@
                 <div class="carousel-item">
 
                   <img
+                    class="d-block w-100"
                     src="./img/proyectos/login_sony.png"
-                    class="d-block w-100"
-                    alt="Sony Website - Productos"
-                  >
+                    alt="Sony Website - Products"
+                  />
 
                 </div>
 
@@ -385,17 +409,17 @@
                 <div class="carousel-item">
 
                   <img
-                    src="./img/proyectos/productos_sony.png"
                     class="d-block w-100"
-                    alt="Sony Website - Detalle"
-                  >
+                    src="./img/proyectos/productos_sony.png"
+                    alt="Sony Website - Details"
+                  />
 
                 </div>
-
 
               </div>
 
 
+              <!-- BOTÓN ANTERIOR -->
 
               <button
                 class="carousel-control-prev"
@@ -404,17 +428,20 @@
                 data-bs-slide="prev"
               >
 
-                <span
-                  class="carousel-control-prev-icon"
-                ></span>
+                <span class="carousel-control-prev-icon"></span>
 
-                <span class="visually-hidden">
-                  Anterior
+                <span
+                  class="visually-hidden"
+                  data-i18n-en="Previous"
+                  data-i18n-es="Anterior"
+                >
+                  Previous
                 </span>
 
               </button>
 
 
+              <!-- BOTÓN SIGUIENTE -->
 
               <button
                 class="carousel-control-next"
@@ -423,25 +450,24 @@
                 data-bs-slide="next"
               >
 
-                <span
-                  class="carousel-control-next-icon"
-                ></span>
+                <span class="carousel-control-next-icon"></span>
 
-                <span class="visually-hidden">
-                  Siguiente
+                <span
+                  class="visually-hidden"
+                  data-i18n-en="Next"
+                  data-i18n-es="Siguiente"
+                >
+                  Next
                 </span>
 
               </button>
-
 
             </div>
 
           </div>
 
 
-
           <div class="academic-project-content">
-
 
             <div class="project-top">
 
@@ -461,45 +487,28 @@
             </h3>
 
 
-            <p>
-
-              Sitio web desarrollado como proyecto académico
-              utilizando PHP y Laravel.
-
-              El proyecto integra frontend, backend, manejo
-              de datos y conexión con una base de datos MySQL.
-
+            <p
+              data-i18n-en="Website developed as an academic project using PHP and Laravel. The project combines frontend, backend, data handling, and a MySQL database connection."
+              data-i18n-es="Sitio web desarrollado como proyecto académico utilizando PHP y Laravel. El proyecto integra frontend, backend, manejo de datos y conexión con una base de datos MySQL."
+            >
+              Website developed as an academic project using PHP and Laravel.
+              The project combines frontend, backend, data handling, and a
+              MySQL database connection.
             </p>
 
 
             <div class="project-tags">
 
-              <span>
-                PHP
-              </span>
-
-              <span>
-                Laravel
-              </span>
-
-              <span>
-                MySQL
-              </span>
-
-              <span>
-                HTML
-              </span>
-
-              <span>
-                CSS
-              </span>
+              <span>PHP</span>
+              <span>Laravel</span>
+              <span>MySQL</span>
+              <span>HTML</span>
+              <span>CSS</span>
 
             </div>
 
 
             <div class="project-actions">
-
-             
 
               <a
                 href="https://github.com/themader/Sony---final"
@@ -511,17 +520,194 @@
 
             </div>
 
-
           </div>
-
 
         </article>
 
 
+        <!-- =================================================
+             PROYECTO 02 - JAVA CONCESIONARIA
+        ================================================== -->
 
-        
+        <article class="academic-project">
+
+          <div class="academic-project-image">
+
+            <div
+              class="carousel slide"
+              id="carouselConcesionaria"
+              data-bs-ride="carousel"
+            >
+
+              <!-- INDICADORES -->
+
+              <div class="carousel-indicators">
+
+                <button
+                  class="active"
+                  type="button"
+                  data-bs-target="#carouselConcesionaria"
+                  data-bs-slide-to="0"
+                  aria-current="true"
+                  aria-label="Imagen 1"
+                ></button>
+
+                <button
+                  type="button"
+                  data-bs-target="#carouselConcesionaria"
+                  data-bs-slide-to="1"
+                  aria-label="Imagen 2"
+                ></button>
+
+                <button
+                  type="button"
+                  data-bs-target="#carouselConcesionaria"
+                  data-bs-slide-to="2"
+                  aria-label="Imagen 3"
+                ></button>
+
+              </div>
 
 
+              <!-- IMÁGENES -->
+
+              <div class="carousel-inner">
+
+                <div class="carousel-item active">
+
+                  <img
+                    class="d-block w-100"
+                    src="./img/proyectos/condoleo_inicio.png"
+                    alt="Condoleo system home"
+                  />
+
+                </div>
+
+
+                <div class="carousel-item">
+
+                  <img
+                    class="d-block w-100"
+                    src="./img/proyectos/menu_cliente.png"
+                    alt="Client menu"
+                  />
+
+                </div>
+
+
+                <div class="carousel-item">
+
+                  <img
+                    class="d-block w-100"
+                    src="./img/proyectos/tienda_condoleo.png"
+                    alt="Condoleo store"
+                  />
+
+                </div>
+
+              </div>
+
+
+              <!-- BOTÓN ANTERIOR -->
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselConcesionaria"
+                data-bs-slide="prev"
+              >
+
+                <span class="carousel-control-prev-icon"></span>
+
+                <span
+                  class="visually-hidden"
+                  data-i18n-en="Previous"
+                  data-i18n-es="Anterior"
+                >
+                  Previous
+                </span>
+
+              </button>
+
+
+              <!-- BOTÓN SIGUIENTE -->
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselConcesionaria"
+                data-bs-slide="next"
+              >
+
+                <span class="carousel-control-next-icon"></span>
+
+                <span
+                  class="visually-hidden"
+                  data-i18n-en="Next"
+                  data-i18n-es="Siguiente"
+                >
+                  Next
+                </span>
+
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <div class="academic-project-content">
+
+            <div class="project-top">
+
+              <span>
+                JAVA · CONCESIONARIA
+              </span>
+
+              <span>
+                03
+              </span>
+
+            </div>
+
+
+            <h3
+              data-i18n-en="Car Dealership Management System"
+              data-i18n-es="Sistema de Concesionaria"
+            >
+              Car Dealership Management System
+            </h3>
+
+
+            <p
+              data-i18n-en="Academic project developed in Java (using Eclipse) for dealership management, applying object-oriented programming concepts, polymorphism, inheritance, and different system modules."
+              data-i18n-es="Proyecto académico desarrollado en Java (En la aplicacion de eclipse) para la gestión de una concesionaria, aplicando conceptos de programación orientada a objetos, Polimorfismo, herencia y manejo de diferentes módulos del sistema."
+            >
+              Academic project developed in Java (using Eclipse) for dealership
+              management, applying object-oriented programming concepts,
+              polymorphism, inheritance, and different system modules.
+            </p>
+
+
+            <div class="project-tags">
+
+              <span>Java</span>
+              <span>POO</span>
+              <span>POO</span>
+              <span>MySql</span>
+
+              <span
+                data-i18n-en="Management system"
+                data-i18n-es="Sistema de gestión"
+              >
+                Management system
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
 
 
         <!-- =================================================
@@ -530,24 +716,23 @@
 
         <article class="academic-project">
 
-
           <div class="academic-project-image">
 
-
             <div
-              id="carouselAirline"
               class="carousel slide"
+              id="carouselAirline"
               data-bs-ride="carousel"
             >
 
+              <!-- INDICADORES -->
 
               <div class="carousel-indicators">
 
                 <button
+                  class="active"
                   type="button"
                   data-bs-target="#carouselAirline"
                   data-bs-slide-to="0"
-                  class="active"
                   aria-current="true"
                   aria-label="Imagen 1"
                 ></button>
@@ -562,25 +747,24 @@
               </div>
 
 
+              <!-- IMÁGENES -->
 
               <div class="carousel-inner">
-
 
                 <div class="carousel-item active">
 
                   <img
-                    src="./img/proyectos/diagrama_bdd.png"
                     class="d-block w-100"
-                    alt="Base de datos de aerolínea"
-                  >
+                    src="./img/proyectos/diagrama_bdd.png"
+                    alt="Airline database"
+                  />
 
                 </div>
-
-
 
               </div>
 
 
+              <!-- BOTÓN ANTERIOR -->
 
               <button
                 class="carousel-control-prev"
@@ -589,17 +773,20 @@
                 data-bs-slide="prev"
               >
 
-                <span
-                  class="carousel-control-prev-icon"
-                ></span>
+                <span class="carousel-control-prev-icon"></span>
 
-                <span class="visually-hidden">
-                  Anterior
+                <span
+                  class="visually-hidden"
+                  data-i18n-en="Previous"
+                  data-i18n-es="Anterior"
+                >
+                  Previous
                 </span>
 
               </button>
 
 
+              <!-- BOTÓN SIGUIENTE -->
 
               <button
                 class="carousel-control-next"
@@ -608,25 +795,24 @@
                 data-bs-slide="next"
               >
 
-                <span
-                  class="carousel-control-next-icon"
-                ></span>
+                <span class="carousel-control-next-icon"></span>
 
-                <span class="visually-hidden">
-                  Siguiente
+                <span
+                  class="visually-hidden"
+                  data-i18n-en="Next"
+                  data-i18n-es="Siguiente"
+                >
+                  Next
                 </span>
 
               </button>
-
 
             </div>
 
           </div>
 
 
-
           <div class="academic-project-content">
-
 
             <div class="project-top">
 
@@ -646,40 +832,29 @@
             </h3>
 
 
-            <p>
-
-              Proyecto académico de modelado y gestión de
-              una base de datos para una aerolínea utilizando
-              MySQL.
-
-              Se aplicaron conceptos de modelado, relaciones
-              y consultas SQL.
-
+            <p
+              data-i18n-en="Academic project focused on modeling and managing an airline database using MySQL. It applies database modeling, relationships, and SQL queries."
+              data-i18n-es="Proyecto académico de modelado y gestión de una base de datos para una aerolínea utilizando MySQL. Se aplicaron conceptos de modelado, relaciones y consultas SQL."
+            >
+              Academic project focused on modeling and managing an airline
+              database using MySQL. It applies database modeling,
+              relationships, and SQL queries.
             </p>
 
 
             <div class="project-tags">
 
-              <span>
-                MySQL
-              </span>
-
-              <span>
-                SQL
-              </span>
-
-              <span>
-                Database
-              </span>
+              <span>MySQL</span>
+              <span>SQL</span>
+              <span>Database</span>
+              <span>Trigger</span>
+              <span>Views</span>
 
             </div>
 
-
           </div>
 
-
         </article>
-
 
 
         <!-- =================================================
@@ -688,24 +863,23 @@
 
         <article class="academic-project">
 
-
           <div class="academic-project-image">
 
-
             <div
-              id="carouselInsurance"
               class="carousel slide"
+              id="carouselInsurance"
               data-bs-ride="carousel"
             >
 
+              <!-- INDICADORES -->
 
               <div class="carousel-indicators">
 
                 <button
+                  class="active"
                   type="button"
                   data-bs-target="#carouselInsurance"
                   data-bs-slide-to="0"
-                  class="active"
                   aria-current="true"
                   aria-label="Imagen 1"
                 ></button>
@@ -720,17 +894,17 @@
               </div>
 
 
+              <!-- IMÁGENES -->
 
               <div class="carousel-inner">
-
 
                 <div class="carousel-item active">
 
                   <img
-                    src="./img/proyectos/consora_index.png"
                     class="d-block w-100"
-                    alt="Sistema de seguros"
-                  >
+                    src="./img/proyectos/consora_index.png"
+                    alt="Insurance system"
+                  />
 
                 </div>
 
@@ -738,17 +912,17 @@
                 <div class="carousel-item">
 
                   <img
-                    src="./img/proyectos/login_consora.png"
                     class="d-block w-100"
-                    alt="Sistema de seguros - Django"
-                  >
+                    src="./img/proyectos/login_consora.png"
+                    alt="Insurance system - Django"
+                  />
 
                 </div>
-
 
               </div>
 
 
+              <!-- BOTÓN ANTERIOR -->
 
               <button
                 class="carousel-control-prev"
@@ -757,17 +931,20 @@
                 data-bs-slide="prev"
               >
 
-                <span
-                  class="carousel-control-prev-icon"
-                ></span>
+                <span class="carousel-control-prev-icon"></span>
 
-                <span class="visually-hidden">
-                  Anterior
+                <span
+                  class="visually-hidden"
+                  data-i18n-en="Previous"
+                  data-i18n-es="Anterior"
+                >
+                  Previous
                 </span>
 
               </button>
 
 
+              <!-- BOTÓN SIGUIENTE -->
 
               <button
                 class="carousel-control-next"
@@ -776,25 +953,24 @@
                 data-bs-slide="next"
               >
 
-                <span
-                  class="carousel-control-next-icon"
-                ></span>
+                <span class="carousel-control-next-icon"></span>
 
-                <span class="visually-hidden">
-                  Siguiente
+                <span
+                  class="visually-hidden"
+                  data-i18n-en="Next"
+                  data-i18n-es="Siguiente"
+                >
+                  Next
                 </span>
 
               </button>
-
 
             </div>
 
           </div>
 
 
-
           <div class="academic-project-content">
-
 
             <div class="project-top">
 
@@ -809,76 +985,65 @@
             </div>
 
 
-            <h3><Strong>CONSORA</Strong></h3>
+            <h3>
+              <strong>CONSORA</strong>
+            </h3>
 
-            <p>Mi proyecto de Tesis <Strong>(en proceso)</Strong></p>
-            <p>
 
-              Aplicación web desarrollada con Python y Django
-              orientado a ser un Marketplace de proveedores, consorcios y administradores.
-              Utilizando base de datos MariaDB/MySql con tablas relacionales 
-
+            <p
+              data-i18n-en="My Thesis Project (in progress)"
+              data-i18n-es="Mi proyecto de Tesis <strong>(en proceso)</strong>"
+            >
+              My Thesis Project (in progress)
             </p>
-            <p>Contara con planes de pago, encuestas, demas</p>
+
+
+            <p
+              data-i18n-en="Web application developed with Python and Django, designed as a marketplace for providers, condominium associations, and administrators, using a MariaDB/MySQL relational database."
+              data-i18n-es="Aplicación web desarrollada con Python y Django orientado a ser un Marketplace de proveedores, consorcios y administradores. Utilizando base de datos MariaDB/MySql con tablas relacionales"
+            >
+              Web application developed with Python and Django, designed as a
+              marketplace for providers, condominium associations, and
+              administrators, using a MariaDB/MySQL relational database.
+            </p>
+
+
+            <p
+              data-i18n-en="It will include subscription plans, surveys, and additional features."
+              data-i18n-es="Contara con planes de pago, encuestas, demas"
+            >
+              It will include subscription plans, surveys, and additional
+              features.
+            </p>
 
 
             <div class="project-tags">
 
-              <span>
-                Python
-              </span>
-
-              <span>
-                Django
-              </span>
-
-              <span>
-                Web
-              </span>
-
-              <span>
-                Mysql
-              </span>
-
-              <span>
-                MariaDB
-              </span>
-
-              <span>
-                JavaScript
-              </span>
-              <span>
-                Api Google
-              </span>
-
-              <span>
-                Bootstrap
-              </span>
+              <span>Python</span>
+              <span>Django</span>
+              <span>Web</span>
+              <span>Mysql</span>
+              <span>MariaDB</span>
+              <span>JavaScript</span>
+              <span>Api Google</span>
+              <span>Bootstrap</span>
 
             </div>
 
-
           </div>
 
-
         </article>
-
 
       </div>
 
     </section>
 
 
-
     <!-- =====================================================
          EDUCACIÓN
     ====================================================== -->
 
-    <section
-      id="education"
-      class="section container"
-    >
-
+    <section class="section container" id="education">
 
       <div class="section-label">
 
@@ -893,31 +1058,33 @@
       </div>
 
 
-
       <div class="section-intro">
 
-        <p class="kicker">
-          FORMACIÓN
+        <p
+          class="kicker"
+          data-i18n-en="EDUCATION"
+          data-i18n-es="FORMACIÓN"
+        >
+          EDUCATION
         </p>
 
-        <h2>
 
-          Education &<br>
+        <h2>
+          Education &amp;<br />
 
           <em>
             certifications.
           </em>
-
         </h2>
 
       </div>
 
 
-
       <div class="education-cards">
 
-
-        <!-- Da Vinci -->
+        <!-- =================================================
+             DA VINCI
+        ================================================== -->
 
         <article class="education-card">
 
@@ -925,13 +1092,12 @@
             01
           </div>
 
-
           <div class="education-logo">
 
             <img
               src="./img/logo-davinci.png"
               alt="Escuela Da Vinci"
-            >
+            />
 
           </div>
 
@@ -946,20 +1112,28 @@
               Analista de Sistemas
             </h3>
 
-            <p>
-              Escuela Da Vinci · Último cuatrimestre
+            <p
+              data-i18n-en="Escuela Da Vinci · Final semester"
+              data-i18n-es="Escuela Da Vinci · Último cuatrimestre"
+            >
+              Escuela Da Vinci · Final semester
             </p>
 
-            <strong>
-              Promedio general: 8,84
+            <strong
+              data-i18n-en="Overall average: 8.84"
+              data-i18n-es="Promedio general: 8,84"
+            >
+              Overall average: 8.84
             </strong>
 
             <a
               href="https://www.linkedin.com/feed/update/urn:li:activity:7364483358216675329/"
               target="_blank"
               rel="noopener noreferrer"
+              data-i18n-en="View intermediate degree ↗"
+              data-i18n-es="Ver título intermedio ↗"
             >
-              Ver título intermedio ↗
+              View intermediate degree ↗
             </a>
 
           </div>
@@ -967,8 +1141,9 @@
         </article>
 
 
-
-        <!-- IOL -->
+        <!-- =================================================
+             IOL
+        ================================================== -->
 
         <article class="education-card">
 
@@ -976,13 +1151,12 @@
             02
           </div>
 
-
           <div class="education-logo">
 
             <img
               src="./img/logo-iol-academy.png"
               alt="IOL Academy"
-            >
+            />
 
           </div>
 
@@ -1001,16 +1175,21 @@
               IOL Academy
             </p>
 
-            <strong>
-              Finalizado
+            <strong
+              data-i18n-en="Completed"
+              data-i18n-es="Finalizado"
+            >
+              Completed
             </strong>
 
             <a
               href="https://www.linkedin.com/feed/update/urn:li:activity:7374116692173504512/"
               target="_blank"
               rel="noopener noreferrer"
+              data-i18n-en="View certificate ↗"
+              data-i18n-es="Ver certificado ↗"
             >
-              Ver certificado ↗
+              View certificate ↗
             </a>
 
           </div>
@@ -1018,8 +1197,9 @@
         </article>
 
 
-
-        <!-- Educación IT -->
+        <!-- =================================================
+             EDUCACIÓN IT - POWER BI
+        ================================================== -->
 
         <article class="education-card">
 
@@ -1027,13 +1207,12 @@
             03
           </div>
 
-
           <div class="education-logo">
 
             <img
               src="./img/logo-educacionit.png"
               alt="Educación IT"
-            >
+            />
 
           </div>
 
@@ -1052,27 +1231,31 @@
               Educación IT
             </p>
 
-            <strong>
-              Finalizado
+            <strong
+              data-i18n-en="Completed"
+              data-i18n-es="Finalizado"
+            >
+              Completed
             </strong>
 
             <a
               href="https://www.linkedin.com/feed/update/urn:li:activity:7413319364680245248/"
               target="_blank"
               rel="noopener noreferrer"
+              data-i18n-en="View certificate ↗"
+              data-i18n-es="Ver certificado ↗"
             >
-              Ver certificado ↗
+              View certificate ↗
             </a>
 
           </div>
 
-          
-
         </article>
 
 
-
-        <!-- Digital House -->
+        <!-- =================================================
+             DIGITAL HOUSE
+        ================================================== -->
 
         <article class="education-card">
 
@@ -1080,13 +1263,12 @@
             04
           </div>
 
-
           <div class="education-logo">
 
             <img
               src="./img/logo-digital-house.png"
               alt="Digital House"
-            >
+            />
 
           </div>
 
@@ -1105,8 +1287,11 @@
               Digital House
             </p>
 
-            <strong>
-              En curso
+            <strong
+              data-i18n-en="In progress"
+              data-i18n-es="En curso"
+            >
+              In progress
             </strong>
 
           </div>
@@ -1114,7 +1299,9 @@
         </article>
 
 
-        <!-- Presupuesto Digital -->
+        <!-- =================================================
+             PRESUPUESTO DIGITAL
+        ================================================== -->
 
         <article class="education-card">
 
@@ -1122,13 +1309,12 @@
             05
           </div>
 
-
           <div class="education-logo">
 
             <img
               src="./img/logo-educacionit.png"
               alt="Educación IT"
-            >
+            />
 
           </div>
 
@@ -1136,7 +1322,7 @@
           <div class="education-content">
 
             <span>
-              IN PROGRESS
+              CERTIFICATION
             </span>
 
             <h3>
@@ -1147,16 +1333,31 @@
               Educación IT
             </p>
 
-            <strong>
-              En proceso
+            <strong
+              data-i18n-en="Completed"
+              data-i18n-es="Finalizado"
+            >
+              Completed
             </strong>
+
+            <a
+              href="https://www.linkedin.com/feed/update/urn:li:activity:7504575867650605056/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n-en="View certificate ↗"
+              data-i18n-es="Ver certificado ↗"
+            >
+              View certificate ↗
+            </a>
 
           </div>
 
         </article>
 
 
-        <!-- Ingeniería de Software con IA y Coding Agents -->
+        <!-- =================================================
+             INGENIERÍA DE SOFTWARE CON IA
+        ================================================== -->
 
         <article class="education-card">
 
@@ -1164,13 +1365,12 @@
             06
           </div>
 
-
           <div class="education-logo">
 
             <img
               src="./img/logo-educacionit.png"
               alt="Educación IT"
-            >
+            />
 
           </div>
 
@@ -1189,30 +1389,27 @@
               Educación IT
             </p>
 
-            <strong>
-              En proceso
+            <strong
+              data-i18n-en="In progress"
+              data-i18n-es="En proceso"
+            >
+              In progress
             </strong>
 
           </div>
 
         </article>
 
-
       </div>
 
     </section>
-
 
 
     <!-- =====================================================
          ABOUT
     ====================================================== -->
 
-    <section
-      id="about"
-      class="section container"
-    >
-
+    <section class="section container" id="about">
 
       <div class="section-label">
 
@@ -1227,39 +1424,44 @@
       </div>
 
 
-
       <div class="about-new">
 
+        <!-- TÍTULO -->
 
         <div class="about-new-title">
 
-          <p class="kicker">
+          <p
+            class="kicker"
+            data-i18n-en="A LITTLE ABOUT ME"
+            data-i18n-es="A LITTLE ABOUT ME"
+          >
             A LITTLE ABOUT ME
           </p>
 
-          <h2>
 
-            Curious by nature.<br>
+          <h2>
+            Curious by nature.<br />
 
             <em>
               Technical by choice.
             </em>
-
           </h2>
 
         </div>
 
 
+        <!-- CONTENIDO -->
 
         <div class="about-new-content">
 
+          <!-- FOTO -->
 
           <div class="about-new-photo">
 
             <img
               src="./img/perfil.jpeg"
               alt="Franco Tomás Russo"
-            >
+            />
 
             <span>
               FRANCO RUSSO · 2026
@@ -1268,30 +1470,26 @@
           </div>
 
 
+          <!-- TEXTO -->
 
           <div class="about-new-text">
 
             <p>
-
               Soy <strong>Franco Tomás Russo</strong>,
               Software Developer Jr. enfocado en el desarrollo
               de aplicaciones web, backend y soluciones de software.
-
             </p>
 
 
             <p>
-
               Actualmente estoy cursando el
               <strong>último cuatrimestre de Analista de Sistemas</strong>
               en <strong>Escuela Da Vinci</strong>, con un promedio
               general de <strong>8,84</strong>.
-
             </p>
 
 
             <p>
-
               Durante mi formación trabajé con tecnologías como
               <strong>
                 Java, Python, PHP, JavaScript, Laravel,
@@ -1302,51 +1500,43 @@
               <strong>
                 Android Studio, Java y Kotlin
               </strong>.
-
             </p>
 
 
-            <p>
-
-              Me interesa transformar ideas y necesidades en
-              soluciones funcionales, manteniendo un código claro,
-              una buena estructura y una experiencia de usuario
-              intuitiva.
-
+            <p
+              data-i18n-en="I’m interested in turning ideas and needs into functional solutions while maintaining clean code, solid structure, and an intuitive user experience."
+              data-i18n-es="Me interesa transformar ideas y necesidades en soluciones funcionales, manteniendo un código claro, una buena estructura y una experiencia de usuario intuitiva."
+            >
+              I’m interested in turning ideas and needs into functional
+              solutions while maintaining clean code, solid structure,
+              and an intuitive user experience.
             </p>
 
 
-            <p>
-
-              Actualmente busco
-              <strong>nuevos desafíos en desarrollo de software</strong>
-              donde pueda aportar mis conocimientos, continuar
-              formándome y crecer profesionalmente junto a un equipo.
-
+            <p
+              data-i18n-en="I’m currently looking for <strong>new challenges in software development</strong> where I can contribute my knowledge, keep learning, and grow professionally as part of a team."
+              data-i18n-es="Actualmente busco <strong>nuevos desafíos en desarrollo de software</strong> donde pueda aportar mis conocimientos, continuar formándome y crecer profesionalmente junto a un equipo."
+            >
+              I’m currently looking for
+              <strong>new challenges in software development</strong>
+              where I can contribute my knowledge, keep learning,
+              and grow professionally as part of a team.
             </p>
-
 
           </div>
 
-
         </div>
-
 
       </div>
 
     </section>
 
 
-
     <!-- =====================================================
          STACK
     ====================================================== -->
 
-    <section
-      id="stack"
-      class="section container"
-    >
-
+    <section class="section container" id="stack">
 
       <div class="section-label">
 
@@ -1361,38 +1551,38 @@
       </div>
 
 
-
       <div class="section-intro">
 
         <p class="kicker">
           TECHNOLOGIES
         </p>
 
-        <h2>
 
-          A stack built to<br>
+        <h2>
+          A stack built to<br />
 
           <em>
             ship.
           </em>
-
         </h2>
 
       </div>
 
 
-
       <div class="stack-layout">
 
+        <!-- STACK PRINCIPAL -->
 
         <div class="stack-main">
 
+          <!-- LANGUAGES -->
 
           <div class="stack-row">
 
             <span class="stack-category">
               LANGUAGES
             </span>
+
 
             <div class="stack-items">
 
@@ -1407,12 +1597,14 @@
           </div>
 
 
+          <!-- WEB & FRAMEWORKS -->
 
           <div class="stack-row">
 
             <span class="stack-category">
-              WEB & FRAMEWORKS
+              WEB &amp; FRAMEWORKS
             </span>
+
 
             <div class="stack-items">
 
@@ -1430,12 +1622,14 @@
           </div>
 
 
+          <!-- MOBILE -->
 
           <div class="stack-row">
 
             <span class="stack-category">
               MOBILE
             </span>
+
 
             <div class="stack-items">
 
@@ -1448,12 +1642,14 @@
           </div>
 
 
+          <!-- DATA & TOOLS -->
 
           <div class="stack-row">
 
             <span class="stack-category">
-              DATA & TOOLS
+              DATA &amp; TOOLS
             </span>
+
 
             <div class="stack-items">
 
@@ -1467,16 +1663,17 @@
 
           </div>
 
-
         </div>
 
 
+        <!-- PRINCIPLES -->
 
         <aside class="principles">
 
           <span class="mini-label">
             PRINCIPLES
           </span>
+
 
           <ul>
 
@@ -1500,28 +1697,22 @@
 
         </aside>
 
-
       </div>
 
     </section>
-
 
 
     <!-- =====================================================
          CONTACT
     ====================================================== -->
 
-    <section
-      class="fr-contact-section"
-      id="contact"
-    >
-
+    <section class="fr-contact-section" id="contact">
 
       <div class="fr-contact-grid">
 
+        <!-- TEXTO -->
 
         <div class="fr-contact-copy">
-
 
           <div class="fr-section-label">
 
@@ -1536,31 +1727,32 @@
           </div>
 
 
-
           <h2>
+            Let's build<br />
 
-            Let's build<br>
-
-            something<br>
+            something<br />
 
             <em>
               useful.
             </em>
-
           </h2>
 
 
+          <p
+            data-i18n-en="Have a project, an opportunity, or simply want to talk about technology? I’m open to new challenges."
+            data-i18n-es="Have a project, an opportunity, or simply want to talk about technology? I’m open to new challenges."
+          >
+            Have a project, an opportunity, or simply want to talk
+            about technology?
 
-          <p>
+            <br />
+            <br />
 
-            ¿Tenés un proyecto, una oportunidad o simplemente
-            querés hablar de tecnología?
-
-            Estoy abierto a nuevos desafíos.
-
+            I’m open to new challenges.
           </p>
 
 
+          <!-- BOTÓN WHATSAPP -->
 
           <a
             class="fr-contact-button"
@@ -1568,18 +1760,15 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-
             Start a conversation ↗
-
           </a>
-
 
         </div>
 
 
+        <!-- LINKS DE CONTACTO -->
 
         <div class="fr-contact-links">
-
 
           <!-- EMAIL -->
 
@@ -1591,6 +1780,7 @@
             <span class="fr-contact-icon">
               ✉
             </span>
+
 
             <span class="fr-contact-info">
 
@@ -1604,6 +1794,7 @@
 
             </span>
 
+
             <span class="fr-contact-arrow">
               ↗
             </span>
@@ -1611,22 +1802,22 @@
           </a>
 
 
-
           <!-- WHATSAPP -->
-
-          <a
-            class="fr-contact-item"
-            href="https://wa.me/541167459591"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="fr-contact-item" href="https://wa.me/541167459591" rel="noopener noreferrer" target="_blank">
 
             <span class="fr-contact-icon">
-              ☎
+              <svg
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+                fill="currentColor"
+              >
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982 1-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.002 5.45-4.437 9.884-9.887 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.158 11.89c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.875 11.875 0 005.683 1.448h.005c6.555 0 11.89-5.335 11.892-11.89a11.82 11.82 0 00-3.477-8.416"/>
+              </svg>
             </span>
 
             <span class="fr-contact-info">
-
               <small>
                 WHATSAPP
               </small>
@@ -1634,7 +1825,6 @@
               <span>
                 +54 11 6745 9591
               </span>
-
             </span>
 
             <span class="fr-contact-arrow">
@@ -1649,7 +1839,7 @@
 
           <a
             class="fr-contact-item"
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/francotomasrusso/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -1657,6 +1847,7 @@
             <span class="fr-contact-icon">
               in
             </span>
+
 
             <span class="fr-contact-info">
 
@@ -1670,12 +1861,12 @@
 
             </span>
 
+
             <span class="fr-contact-arrow">
               ↗
             </span>
 
           </a>
-
 
 
           <!-- LOCATION -->
@@ -1685,6 +1876,7 @@
             <span class="fr-contact-icon">
               ⌖
             </span>
+
 
             <span class="fr-contact-info">
 
@@ -1700,17 +1892,13 @@
 
           </div>
 
-
         </div>
-
 
       </div>
 
     </section>
 
-
   </main>
-
 
 
   <!-- =====================================================
@@ -1723,27 +1911,22 @@
       FRANCO RUSSO © 2026
     </span>
 
-    <span>
-      DESIGNED & BUILT WITH HTML / CSS / JS
-    </span>
-
   </footer>
 
 
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
 
   <!-- Bootstrap JS -->
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  ></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- JS propio -->
 
-  <script
-    src="./js/script.js"
-  ></script>
-
+  <script src="./js/script.js"></script>
+  <script src="./js/script_bilingue.js"></script>
+  <script src="./js/mensaje.js"></script>
 
 </body>
 
